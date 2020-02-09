@@ -164,6 +164,7 @@ class AutoSuggestTagInput {
 
     // input key up handler
     _handleInput = (event) => {
+        const lastTag = this.inputContainer.children[this.value.length - 1]
         // down 40 up 38 return 13 backspace 8
         if (event.keyCode === 40 || event.keyCode === 38 || event.keyCode === 13) {
             if(
@@ -173,8 +174,7 @@ class AutoSuggestTagInput {
                 this._focusSuggestion(event.keyCode)
             }
         }
-        else if (this.value.length && (event.keyCode === 8)) {
-            const lastTag = this.inputContainer.children[this.value.length - 1]
+        else if (!this.suggestionContainer.children.length && this.value.length && (event.keyCode === 8)) {
             if (lastTag) {
                 const currentClass = lastTag.getAttribute('class')
                 if(currentClass.includes('active')) {
@@ -186,6 +186,12 @@ class AutoSuggestTagInput {
             }
         }
         else{
+            if (lastTag) {
+                const currentClass = lastTag.getAttribute('class')
+                if(currentClass.includes('active')) {
+                    lastTag.setAttribute('class', 'tag')
+                }
+            }
             this._debouncedShowSuggestion()
         }
     }
