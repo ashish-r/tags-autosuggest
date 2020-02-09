@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>
+            Tag Input With Autosuggest Widget - Vanilla Js
+        </title>
+
+    </head>
+    <body>
+        <div class="container">
+            <h3>Tag Input With Autosuggest Demo</h3>
+            <div>
+                <input id ="autosuggest-input" />  
+            </div>
+        </div>
+    </body>
+
+    <style>
+        .container {
+            width: 50%;
+            margin: auto;
+        }
+        .autosuggest-container {
+            position: relative;
+        }
+        .input-container {
+            border: 2px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            cursor: text;
+            padding: 2px;
+            color: #444;
+        }
+        .tag {
+            border-radius: 25px;
+            transition: all 0.3s;
+            margin: 4px 2px;
+            padding: 10px;
+            background: #efefef;
+            cursor: default;
+            font-weight: 500;
+        }
+        .tag.active {
+            border: 1px solid #777777;
+        }
+        .tag .close-btn {
+            margin-left: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            padding: 0 5px 2px 5px;
+            font-size: 12px;
+            border-radius: 10px;
+            background: #c7c7c7;
+        }
+        .input-container input {
+            padding: 5px;
+            border: 0;
+            outline: none;
+            flex: 1;
+            height: 50px;
+        }
+        .suggestion-container {
+            position: absolute;
+            width: 100%;
+            border: 1px solid #e6e6e6;
+            border-top: none;
+            max-height: 500px;
+            overflow-y: scroll;
+        }
+        .suggestion {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .no-suggestion {
+            height: 50px;
+            margin: 10px;
+            cursor: default;
+        }
+        .suggestion.active,.suggestion:hover {
+            background: #ebebeb;
+            
+        }
+    </style>
+
+    <script src="index.js"></script>
+    <script>
+        const dataSet = [
+            {"Name": "Australia", "Code": "AU"},
+            {"Name": "Bermuda", "Code": "BM"},
+            {"Name": "Canada", "Code": "CA"},
+            {"Name": "Cameroon", "Code": "CM"},
+            {"Name": "Denmark", "Code": "DK"},
+            {"Name": "France", "Code": "FR"},
+            {"Name": "Finland", "Code": "FI"},
+            {"Name": "Germany", "Code": "DE"},
+            {"Name": "Greenland", "Code": "GL"},
+            {"Name": "Hong Kong", "Code": "HK"},
+            {"Name": "India", "Code": "IN"},
+            {"Name": "Italy", "Code": "IT"},
+            {"Name": "Japan", "Code": "JP"},
+            {"Name": "Mexico", "Code": "MX"},
+            {"Name": "Norway", "Code": "NO"},
+            {"Name": "Poland", "Code": "PL"},
+            {"Name": "Switzerland", "Code": "CH"},
+            {"Name": "United Kingdom", "Code": "GB"},
+            {"Name": "United States", "Code": "US"}
+        ]
+        // Initialising autocomplete
+        new AutoSuggestTagInput(
+            document.getElementById('autosuggest-input'),
+            dataSet,
+            'Name',
+            'Code',
+            true
+        )
+    </script>
+</html>
+
+
+
+
