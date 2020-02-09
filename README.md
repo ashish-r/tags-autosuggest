@@ -1,6 +1,8 @@
 # tags-autosuggest
 An auto suggest tags input in vanillajs
 
+Demo: http://ashish-r.github.io/tags-autosuggest
+
 # Screenshots
 ![Autosuggest Tab Input][Autosuggest Tab Input]
 
