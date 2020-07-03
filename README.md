@@ -1,3 +1,5 @@
+[![DeepScan grade](https://deepscan.io/api/teams/10012/projects/12696/branches/199341/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=10012&pid=12696&bid=199341)
+
 # tags-autosuggest
 An auto suggest tags input in vanillajs. 
 
