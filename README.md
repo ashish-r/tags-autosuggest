@@ -1,4 +1,5 @@
 [![DeepScan grade](https://deepscan.io/api/teams/10012/projects/12696/branches/199341/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=10012&pid=12696&bid=199341)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ashish-r/tags-autosuggest/blob/master/LICENSE)
 
 # tags-autosuggest
 An auto suggest tags input in vanillajs. 
